@@ -1,0 +1,16 @@
+<svg width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">SalesOS</title>
+  <desc id="desc">Minimal SalesOS logo mark</desc>
+  <defs>
+    <linearGradient id="g" x1="20" y1="12" x2="142" y2="150" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="a" x1="44" y1="48" x2="122" y2="112" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#DBEAFE" stop-opacity="0.88"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="144" height="144" rx="40" fill="url(#g)"/>
+  <path d="M49 49C57 42 67 39 80 39C97 39 111 47 117 61L104 68C100 59 91 53 79 53C68 53 60 56 55 62C50 68 51 74 59 77L91 87C106 92 113 100 113 113C113 128 99 138 79 138C58 138 42 127 37 111L51 105C54 116 64 124 79 124C91 124 99 120 99 113C99 108 96 105 88 102L57 93C41 88 36 80 36 68C36 60 41 53 49 49Z" fill="url(#a)"/>
+</svg>

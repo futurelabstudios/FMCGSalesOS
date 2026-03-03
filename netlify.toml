@@ -1,0 +1,8 @@
+[build]
+  command = "npm install --prefix client && VITE_DEMO_MODE=true npm run build --prefix client"
+  publish = "client/dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
