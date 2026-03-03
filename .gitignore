@@ -8,3 +8,6 @@ server/dist/
 .DS_Store
 server/.env
 client/.env
+
+# Local Netlify folder
+.netlify
