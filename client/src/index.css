@@ -1128,6 +1128,7 @@ select {
   align-items: center;
   gap: 0.7rem;
   padding: 0.75rem;
+  overflow: hidden;
 }
 
 .minimal-panel {
@@ -1139,6 +1140,7 @@ select {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0.45rem;
+  min-width: 0;
 }
 
 .minimal-filters label {
@@ -1158,11 +1160,18 @@ select {
   padding: 1rem;
   display: grid;
   gap: 0.72rem;
+  overflow: hidden;
+}
+
+.ai-center-heading {
+  min-width: 0;
 }
 
 .ai-center-heading h2 {
   margin-top: 0.35rem;
   font-size: clamp(1.04rem, 2.5vw, 1.36rem);
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .ai-center-heading p {
@@ -1170,6 +1179,8 @@ select {
   color: #48617f;
   line-height: 1.54;
   font-size: 0.86rem;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .topic-button-grid {
@@ -1190,6 +1201,8 @@ select {
   gap: 0.45rem;
   cursor: pointer;
   transition: transform 0.12s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+  min-height: 86px;
+  overflow: hidden;
 }
 
 .topic-button:hover {
@@ -1207,6 +1220,11 @@ select {
 .topic-button strong {
   font-size: 0.78rem;
   color: #173f6c;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .topic-button p {
@@ -1214,6 +1232,15 @@ select {
   font-size: 0.69rem;
   color: #5a7390;
   line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.topic-button > div {
+  min-width: 0;
 }
 
 .snapshot-row {
@@ -1227,6 +1254,8 @@ select {
   border-radius: 11px;
   background: #fbfdff;
   padding: 0.5rem;
+  min-height: 72px;
+  overflow: hidden;
 }
 
 .snapshot-card p {
@@ -1235,12 +1264,20 @@ select {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: 700;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .snapshot-card h3 {
   margin-top: 0.16rem;
   font-size: 0.98rem;
   color: #173f6c;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .ai-chat-scroll {
@@ -1253,6 +1290,38 @@ select {
   padding: 0.55rem;
   display: grid;
   gap: 0.42rem;
+  overscroll-behavior: contain;
+}
+
+.hero-meta-row span {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.identity-chip {
+  min-width: 0;
+  max-width: 240px;
+}
+
+.identity-chip strong,
+.identity-chip p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chat-bubble {
+  min-width: 0;
+}
+
+.chat-bubble p,
+.chat-bubble small {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.chat-bubble p {
+  white-space: pre-wrap;
 }
 
 @media (max-width: 1180px) {
@@ -1276,5 +1345,15 @@ select {
 
   .snapshot-row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .identity-chip {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .snapshot-row {
+    grid-template-columns: 1fr;
   }
 }
